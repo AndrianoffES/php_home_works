@@ -1,5 +1,5 @@
 <?php 
-
+/*
 //С помощью цикла while вывести все числа в промежутке от 0 до 100, которые делятся на 3 без остатка.
 $n=1;
 while ($n++<100){
@@ -175,7 +175,7 @@ foreach($location as $key => $cities){
        
     }
 }
-
+*/
 //Объединить две ранее написанные функции в одну, которая получает строку на русском языке, 
 // производит транслитерацию и замену пробелов на подчеркивания 
 $letters=[
@@ -228,7 +228,7 @@ function translite ($letters, $text){
             
         }
     }          
-   return implode ($resultPhraze);
+   return preg_replace('/\s/', '_',implode ($resultPhraze));
    
 }
 echo translite($letters, $text);
